@@ -3,20 +3,18 @@ package atv3Generics;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pedidos extends ProdutoX {
+public class Pedidos <T extends ProdutoX>   {
 	
 	
-	List <ProdutoX> prod = new ArrayList<ProdutoX>();	
+	List <T> prod = new ArrayList<>();	
 	
 	
-	public <T, V> void adicionarProd(T nome, V valor) {
-		this.setNome(nome);
-		this.setPreco(valor);
-		return;
+	public void adicionarProd(T food) {
+		prod.add(food);
 	}
 	
-	public <T, V> void mostrarLista() {
-		
+	public List<T> mostrarLista() {
+		return prod;
 	}
 
 }

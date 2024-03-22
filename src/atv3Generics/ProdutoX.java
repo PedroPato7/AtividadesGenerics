@@ -1,20 +1,25 @@
 package atv3Generics;
 
-public class ProdutoX <T, V>{
+public class ProdutoX{
 	
-	private T nome;
-	private V preco;
+	private String nome;
+	private double preco;
 	
-	public T getNome() {
+	public ProdutoX (String nome, double valor) {
+		setNome(nome);
+		setPreco(valor);
+	}
+	
+	public String getNome() {
 		return nome;
 	}
-	public void setNome(T nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public V getPreco() {
+	public double getPreco() {
 		return preco;
 	}
-	public void setPreco(V preco) {
+	public void setPreco(double preco) {
 		this.preco = preco;
 	}
 	@Override
